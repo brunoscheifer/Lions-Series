@@ -1,4 +1,4 @@
-# Sistema de listagem de séries
+# NetSeries
 
 Este sistema é Usado para guardar uma série e suas informações
 
