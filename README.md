@@ -6,7 +6,7 @@ Este sistema é Usado para guardar uma série e suas informações
 
 ### Variaveis
 
-- **series**: Array que guarda as informacãoes de uma série
+- **series**: Array que guarda as informacões de uma série
 
 ### Funções 
 
