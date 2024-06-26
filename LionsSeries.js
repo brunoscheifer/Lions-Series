@@ -52,10 +52,10 @@ function adicionarSerie() {
     rl.question('Qual o nome da série?: ', (nome) => {
         rl.question('Qual o ano de lançamento da série: ', (ano) => {
             rl.question('Qual o genero da série: ', (genero) => {
-                rl.question('Qual o(a/as) ator/atriz principal da série: ', (principal) => {
+                rl.question('Qual a classificação indicativa da série: ', (idade) => {
                     rl.question('Qual o diretor(a) da série: ', (diretor) => {
 
-                        series.push({nome: nome, ano: parseInt(ano), genero: genero, principal: principal, diretor: diretor, concluido: false})
+                        series.push({nome: nome, ano: parseInt(ano), genero: genero, idade: idade, diretor: diretor, concluido: false})
                         console.log('Série adicionada com sucesso!')
                         exibirMenu()
                     })
@@ -76,13 +76,13 @@ function editarSerie() {
                     rl.question('Digite o novo nome: ', (nome) => {
                         rl.question('Digite o novo ano: ', (ano) => {
                             rl.question('Digite o novo genero: ', (genero) => {
-                                rl.question('Digite o novo protagonista: ', (principal) => {
+                                rl.question('Digite a nova classificação: ', (idade) => {
                                     rl.question('Digite o novo diretor: ', (diretor) => {
                                         series[numero - 1] = {
                                             nome,
                                             ano,
                                             genero,
-                                            principal,
+                                            idade,
                                             diretor,
                                         }
                                         console.log('Editado com sucesso')
@@ -112,7 +112,7 @@ function listarSerie() {
             ${index + 1}. Nome: ${series.nome}
             Ano: ${series.ano}
             Genero: ${series.genero}
-            Protagonista: ${series.principal}
+            Protagonista: ${series.idade}
             Diretor: ${series.diretor}
             Status: ${series.concluido}
             `)
