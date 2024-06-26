@@ -14,7 +14,7 @@ function exibirMenu() {
     1. Adicionar Série
     2. Editar Serie
     3. Listar Séries
-    4. remover Série
+    4. Remover Série
     5. Marcar como Concluido
     6. Sair
     `)
@@ -127,7 +127,7 @@ function removerSerie() {
     } else {
         listarSerie()
 		rl.question('Qual série deseja remover: ', (numero) => {
-			if (numero > 0 && numero <= jogos.length) {
+			if (numero > 0 && numero <= series.length) {
 				series.splice(numero - 1, 1)
 				console.log('Série removida!')
 				exibirMenu()
@@ -146,7 +146,7 @@ function marcarConcluido() {
 	} else {
 		listarSerie()
 		rl.question('Qual série voçê quer marcar como concluida?: ', (numero) => {
-			if (numero > 0 && numero <= lembretes.length) {
+			if (numero > 0 && numero <= series.length) {
 				series[numero-1].concluido = true
 			}
 			console.log("Marcado com sucesso")
