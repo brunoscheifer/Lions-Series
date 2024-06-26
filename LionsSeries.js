@@ -29,6 +29,7 @@ rl.question('Escolha uma opção: ', (opcao) => {
             break
         case '3':
             listarSerie()
+            exibirMenu()
             break
         case '4':
             removerSerie()
@@ -67,7 +68,8 @@ function adicionarSerie() {
 function editarSerie() {
     if (series.length == 0){
 		console.log("Não há séries adicionadas")
-	} else if (series.length == []) {
+        exibirMenu()
+	} else {
         listarSerie()
             rl.question('Digite a série que voçê quer editar: ', (numero) => {
                 if(numero > 0 && numero <= series.length) {
@@ -103,7 +105,6 @@ function editarSerie() {
 function listarSerie() {
 	if (series.length === 0) {
 		console.log('Nenhuma série adicionado ainda!')
-		exibirMenu()
 	} else {
 		console.log('Lista de séries:')
 		series.forEach((series, index) => {
@@ -116,7 +117,6 @@ function listarSerie() {
             Status: ${series.concluido}
             `)
         })
-        exibirMenu()
     }
 }
 
