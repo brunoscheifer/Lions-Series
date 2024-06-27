@@ -112,7 +112,7 @@ function listarSerie() {
             ${index + 1}. Nome: ${series.nome}
             Ano: ${series.ano}
             Genero: ${series.genero}
-            Protagonista: ${series.idade}
+            Classificação: ${series.idade}
             Diretor: ${series.diretor}
             Status: ${series.concluido}
             `)
